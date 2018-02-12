@@ -6,7 +6,7 @@
 #    By: vle-gal <vle-gal@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 15:16:47 by vle-gal           #+#    #+#              #
-#    Updated: 2018/02/03 12:11:54 by vle-gal          ###   ########.fr        #
+#    Updated: 2018/02/12 13:01:40 by vle-gal          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = NORMAL #Makefile simple
@@ -27,7 +27,8 @@ CUT = "\033[K"
 
 #les pré règles
 OBJDIR := objdiro
-OBJS := $(addprefix $(OBJDIR)/,main.o)
+OBJS := $(addprefix $(OBJDIR)/,main.o octant.o octant_bis.o vert_hor.o \
+								gathering_bis.o)
 
 $(OBJDIR)/%.o : %.c
 	@gcc $(CPPFLAGS) $(CFLAGS) $(vpath_h) -Wall -Wextra -Werror -c \
@@ -37,10 +38,10 @@ $(OBJDIR)/%.o : %.c
 all: $(OBJS)
 	@make -C minilibx_macos/
 	@make -C libft/
-	@gcc $(LIB) -o NORMAL $(OBJS)
+	@gcc $(LIB) $(frameworks) -o NORMAL $(OBJS)
 	@echo $(R)Hail to the King Baby!
 	@echo --------------$(X)
-	@./NORMAL
+	@./NORMAL test
 	@echo $(R)--------------
 
 
