@@ -6,7 +6,7 @@
 /*   By: vle-gal <vle-gal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/10 11:11:18 by vle-gal           #+#    #+#             */
-/*   Updated: 2018/02/17 09:18:35 by vle-gal          ###   ########.fr       */
+/*   Updated: 2018/02/17 10:24:26 by vle-gal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	octant5(t_struct *p, int dx, int dy)
 	e = dx;
 	dx *= 2;
 	dy = (dy * 2);
-	// printf("%d %d\n", p->x1, p->x2);
 	while (p->x1 != p->x2)
 	{
 		mlx_pixel_put(p->mlx_ptr, p->win_ptr, p->x1, p->y1, 0x00ff00);
@@ -40,7 +39,6 @@ void	octant6(t_struct *p, int dx, int dy)
 	e = dy;
 	dy *= 2;
 	dx = (dx * 2);
-	// printf("%d %d\n", p->x1, p->x2);
 	while (p->y1 != p->y2)
 	{
 		mlx_pixel_put(p->mlx_ptr, p->win_ptr, p->x1, p->y1, 0x00ff00);
@@ -61,7 +59,6 @@ void	octant7(t_struct *p, int dx, int dy)
 	e = dy;
 	dy *= 2;
 	dx = (dx * 2);
-	// printf("%d %d\n", p->x1, p->x2);
 	while (p->y1 != p->y2)
 	{
 		mlx_pixel_put(p->mlx_ptr, p->win_ptr, p->x1, p->y1, 0x00ff00);
@@ -82,7 +79,6 @@ void	octant8(t_struct *p, int dx, int dy)
 	e = dx;
 	dx *= 2;
 	dy = (dy * 2);
-	// printf("%d %d\n", p->x1, p->x2);
 	while (p->x1 != p->x2)
 	{
 		mlx_pixel_put(p->mlx_ptr, p->win_ptr, p->x1, p->y1, 0x00ff00);

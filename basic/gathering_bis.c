@@ -6,7 +6,7 @@
 /*   By: vle-gal <vle-gal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/12 12:58:02 by vle-gal           #+#    #+#             */
-/*   Updated: 2018/02/17 09:10:45 by vle-gal          ###   ########.fr       */
+/*   Updated: 2018/02/17 10:23:37 by vle-gal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	gathering_pixel(t_struct *p)
 	int dx;
 	int dy;
 
-	// printf("gatfirst[]%d %d\n",p->y1, p->x1);
-	// printf("%d %d\n",p->y2, p->x2);
 	if ((dx = (p->x2 - p->x1)) != 0)
 	{
 		if (dx > 0)
@@ -44,7 +42,6 @@ void	gathering_pixel(t_struct *p)
 
 void	oct1_4(t_struct *p, int dx, int dy)
 {
-	// printf("[]%d %d\n", p->y1, p->x1);
 	if (dy > 0)
 	{
 		if (dx >= dy)
@@ -63,7 +60,6 @@ void	oct1_4(t_struct *p, int dx, int dy)
 
 void	oct5_8(t_struct *p, int dx, int dy)
 {
-	// printf("{}%d %d\n", p->y1, p->x1);
 	if (dy > 0)
 	{
 		if (-dx >= dy)
